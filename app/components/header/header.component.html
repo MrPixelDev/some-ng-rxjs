@@ -1,0 +1,18 @@
+<ion-header [ngSwitch]="stateHeader">
+    <ion-toolbar *ngSwitchCase="'main'">
+        <ng-content select="backButton"></ng-content>
+        <ion-buttons slot="end">
+            <ng-content select="whatsApp"></ng-content>
+            <ng-content select="calendar"></ng-content>
+            <ng-content select="searchSharp"></ng-content>
+            <ng-content select="ask"></ng-content>
+        </ion-buttons>
+        <ng-content select="title"></ng-content>
+    </ion-toolbar>
+
+    <ion-toolbar *ngSwitchCase="'searchField'">
+        <ng-content select="searchField"></ng-content>
+    </ion-toolbar>
+
+    <ng-content select="headerToolbar"></ng-content>
+</ion-header>
